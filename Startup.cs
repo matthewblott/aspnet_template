@@ -22,7 +22,15 @@ namespace aspnet_template
     {
       app.UseDeveloperExceptionPage();
       app.UseStaticFiles();
-      app.UseMvcWithDefaultRoute();
+      app.UseRouting();
+      app.UseCors();
+
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+      });      
+      
+//      app.UseMvcWithDefaultRoute();
         
     }
     
