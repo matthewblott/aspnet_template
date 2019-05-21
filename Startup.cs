@@ -29,8 +29,6 @@ namespace aspnet_template
       {
         endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });      
-      
-//      app.UseMvcWithDefaultRoute();
         
     }
     
